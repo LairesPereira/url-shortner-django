@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'urlshortnerapp/style.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>Document</title>
+</head>
+<body>
+    <div id="subscription_area">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="subscribe_now">
+                <h4>Obrigado!</h4>
+                <p>Sua nova URL encuratada:</p>
+                <a href="{{shortURL}}">{{domain}}{{shortURL}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
