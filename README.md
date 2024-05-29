@@ -3,13 +3,6 @@
 
 Uma interface simples, intuitiva e amigável para encurtar URLS longas.
 
-
-
-
-
-
-
-
 ## Stack utilizada
 
 **Front-end:** HTML, CSS, Bootstrap5
@@ -22,13 +15,13 @@ Uma interface simples, intuitiva e amigável para encurtar URLS longas.
 Clone o projeto
 
 ```bash
-  git clone https://github.com/LairesPereira/MovieStreamingJava
+  git clone https://github.com/LairesPereira/url-shortner-django.git
 ```
 
 Acesse a pasta 
 
 ```bash
-  pip install validators
+  pip install requirements.txt
 ```
 ```bash
   python manage.py runserver

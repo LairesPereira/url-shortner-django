@@ -6,9 +6,10 @@ from .form import ShortnerForm
 
 def shortner(request):
     DOMAIN = "127.0.0.1:8000/"
+    
     if(request.GET.get("o")):
-        originalURL = ShortUrl.objects.all().filter(shortUrl = request.GET.get("o"))[0]
-        return redirect(originalURL.originalUrl)
+        originalURLToRedirect = ShortUrl.objects.all().filter(shortUrl = request.GET.get("o"))[0].originalUrl
+        return redirect(originalURLToRedirect)
 
     elif(request.method == "GET"):
         form = ShortnerForm()
@@ -23,13 +24,10 @@ def shortner(request):
                 return render(request, 'thanks.html', { 
                      'shortURL' : "?o=" + shortenPath,
                      'domain': DOMAIN 
-                     })
+                })
         else:
             form = ShortnerForm()
             return render(request, 'shortnerForm.html', { 
                 'form': form,
                 'nonValidUrl': True 
             })
-
-
-    
